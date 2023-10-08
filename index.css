@@ -87,6 +87,7 @@ h2 {
 }
 
 .input_text {
+    margin-left: 5px;
     width: 95%;
     height: 30px;
     border: none;
@@ -108,8 +109,9 @@ label {
     color: #08b0da;
 }
 
-#sex {
-    padding-left: 20px;
+#age {
+    /* border: 2px solid wheat; */
+    margin-right: 30px;
 }
 
 ::placeholder {
