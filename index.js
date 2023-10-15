@@ -18,11 +18,19 @@ rstBtn.addEventListener('click', () => {
 })
 
 const sbtBtn = document.querySelector('#Submit');
-sbtBtn.addEventListener('click', () => {
+sbtBtn.addEventListener('click', (e) => {
+    const eml = document.querySelector("#email");
     let vry = confirm('Are sure to Submit');
-    if (vry) {
-        reset();
-        alert('form submitted successfully');
+    let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    e.preventDefault();
+    if (emailPattern.test(eml.value)) {
+        if (vry) {
+            reset();
+            alert('form submitted successfully');
+        }
+    }
+    else {
+        alert('wrong email');
     }
 })
 
