@@ -120,6 +120,16 @@ label {
     letter-spacing: 1px;
 }
 
+#submit {
+    transition: 1s;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: #00ccff;
+    background: transparent;
+}
+
 #Submit {
     font-size: 35px;
     transition: 1s;
@@ -128,6 +138,17 @@ label {
     align-items: center;
     letter-spacing: 2px;
     justify-content: center;
+    border: none;
+    color: #00ccff;
+    background: transparent;
+}
+
+#Reset {
+    /* border: 2px solid red; */
+    font-size: 15px;
+    transition: 1s;
+    text-align: end;
+    letter-spacing: 2px;
     border: none;
     color: #00ccff;
     background: transparent;
