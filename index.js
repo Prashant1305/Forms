@@ -24,10 +24,11 @@ sbtBtn.addEventListener('click', (e) => {
     const password = document.querySelector("#password");
     const age = document.querySelector("#age");
 
-    let vry = confirm('Are sure to Submit');
+
     let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     e.preventDefault();
     if (emailPattern.test(eml.value) && name.value && password.value && age.value) {
+        let vry = confirm('Are sure to Submit');
         if (vry) {
             reset();
             alert('form submitted successfully');
