@@ -20,17 +20,32 @@ rstBtn.addEventListener('click', () => {
 const sbtBtn = document.querySelector('#Submit');
 sbtBtn.addEventListener('click', (e) => {
     const eml = document.querySelector("#email");
+    const name = document.querySelector("#name");
+    const password = document.querySelector("#password");
+    const age = document.querySelector("#age");
+
     let vry = confirm('Are sure to Submit');
     let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     e.preventDefault();
-    if (emailPattern.test(eml.value)) {
+    if (emailPattern.test(eml.value) && name.value && password.value && age.value) {
         if (vry) {
             reset();
             alert('form submitted successfully');
         }
     }
+    else if (!name.value) {
+        alert('invalid name');
+    }
+    else if (!emailPattern.test(eml.value)) {
+        alert('invalid email');
+    }
+    else if (!password.value) {
+        alert('invalid password');
+
+    }
     else {
-        alert('wrong email');
+        alert('invalid age');
+
     }
 })
 
